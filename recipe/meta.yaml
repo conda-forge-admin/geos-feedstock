@@ -1,4 +1,4 @@
-{% set version = "3.14.1" %}
+{% set version = "3.15.0" %}
 
 package:
   name: geos
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://download.osgeo.org/geos/geos-{{ version }}.tar.bz2
-  sha256: 3c20919cda9a505db07b5216baa980bacdaa0702da715b43f176fb07eff7e716
+  sha256: d5e5192a686d065eaed082de14dd26244c5c8e02bff16b2c6cce3265f648e00e
   patches:
     - patches/0001-unconditional-geos-pc.patch
 
