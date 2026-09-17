@@ -48,7 +48,6 @@ about:
     for Python, the sf package for R, and others.
   homepage: https://libgeos.org/
   repository: https://github.com/libgeos/geos
-  documentation: https://libgeos.org/
 
 extra:
   recipe-maintainers:
