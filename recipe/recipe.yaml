@@ -15,15 +15,11 @@ source:
 
 build:
   number: 1
-  skip: win and vc<14
 
 requirements:
   build:
     - cmake
-    - if: not win
-      then: make
-    - if: win
-      then: ninja
+    - ninja
     - ${{ compiler('c') }}
     - ${{ stdlib("c") }}
     - ${{ compiler('cxx') }}
