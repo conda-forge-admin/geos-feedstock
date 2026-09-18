@@ -1,9 +1,8 @@
 :: Configure.
+:: Note that CMAKE_ARGS defines: CMAKE_BUILD_TYPE, CMAKE_INSTALL_PREFIX, CMAKE_INSTALL_LIBDIR, etc.
 cmake %CMAKE_ARGS% ^
-      -G "Ninja" ^
-      -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
+      -G Ninja ^
       -D BUILD_SHARED_LIBS=ON ^
-      -D CMAKE_BUILD_TYPE=Release ^
       -S %SRC_DIR% -B build
 if errorlevel 1 exit 1
 

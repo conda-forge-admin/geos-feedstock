@@ -6,11 +6,9 @@ if [[ "${OSX_ARCH}" = "x86_64" ]]; then
     export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"
 fi
 
+# Note that CMAKE_ARGS defines: CMAKE_BUILD_TYPE, CMAKE_INSTALL_PREFIX, CMAKE_INSTALL_LIBDIR, etc.
 cmake ${CMAKE_ARGS} \
       -G Ninja \
-      -D CMAKE_BUILD_TYPE=Release \
-      -D CMAKE_INSTALL_PREFIX=${PREFIX} \
-      -D CMAKE_INSTALL_LIBDIR=lib \
       -D BUILD_SHARED_LIBS=ON \
       -S ${SRC_DIR} -B build
 
