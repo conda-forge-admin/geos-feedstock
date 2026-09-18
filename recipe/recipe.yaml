@@ -24,6 +24,8 @@ requirements:
     - ${{ stdlib("c") }}
     - ${{ compiler('cxx') }}
   run_exports:
+    # pretty poor backcompat.  SO name changes each release.
+    # https://abi-laboratory.pro/?view=timeline&l=geos
     - ${{ pin_subpackage('geos', upper_bound='x.x.x') }}
 
 tests:

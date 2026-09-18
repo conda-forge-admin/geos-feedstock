@@ -3,6 +3,7 @@
 cmake %CMAKE_ARGS% ^
       -G Ninja ^
       -D BUILD_SHARED_LIBS=ON ^
+      -D BUILD_TESTING=ON ^
       -S %SRC_DIR% -B build
 if errorlevel 1 exit 1
 
